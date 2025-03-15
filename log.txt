@@ -1,0 +1,21 @@
+divide by zero
+divide by zero
+Voltage Too Low, Change Batteries. Voltage: 6.512864
+
+too many values to unpack (expected 3)
+can't convert float to int
+can't convert float to int
+can't convert float to int
+can't convert float to int
+Voltage Too Low, Change Batteries. Voltage: 5.476955
+Voltage Too Low, Change Batteries. Voltage: 5.318167
+name 'DEBUG' isn't defined
+IRQ resource already taken by Pin('C13')
+unsupported types for __ge__: 'float', 'NoneType'
+unsupported types for __lt__: 'float', 'NoneType'
+unsupported types for __lt__: 'float', 'NoneType'
+can't convert float to int
+unsupported types for __lt__: 'float', 'NoneType'
+unsupported types for __lt__: 'float', 'NoneType'
+
+
