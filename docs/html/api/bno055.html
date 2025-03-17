@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bno055 module &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="bump_sensors module" href="bump_sensors.html" />
+    <link rel="prev" title="API Documentation" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#base-chassis">Base Chassis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#microcontroller">Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#wiring-pinout-design">Wiring/Pinout design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#course-objective">Course/Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#final-configuration">Final Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software.html#main">Main</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#key-final-testing-results">Key Final testing results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#challenges">Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#reccomendations">Reccomendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#video-demonstration">Video Demonstration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">bno055 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="course.html">course module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="encoder.html">encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="encoder.html#encoder.Encoder"><code class="docutils literal notranslate"><span class="pre">Encoder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoder.html#encoder.to_radians"><code class="docutils literal notranslate"><span class="pre">to_radians()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HAL.html">HAL module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">API Documentation</a></li>
+      <li class="breadcrumb-item active">bno055 module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/bno055.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bno055">
+<span id="bno055-module"></span><h1>bno055 module<a class="headerlink" href="#module-bno055" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="bno055.BNO055">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bno055.</span></span><span class="sig-name descname"><span class="pre">BNO055</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profiler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.I2C_ADDR">
+<span class="sig-name descname"><span class="pre">I2C_ADDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">40</span></em><a class="headerlink" href="#bno055.BNO055.I2C_ADDR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_ACCGYRO">
+<span class="sig-name descname"><span class="pre">MODE_ACCGYRO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#bno055.BNO055.MODE_ACCGYRO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_ACCMAG">
+<span class="sig-name descname"><span class="pre">MODE_ACCMAG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#bno055.BNO055.MODE_ACCMAG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_ACCONLY">
+<span class="sig-name descname"><span class="pre">MODE_ACCONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#bno055.BNO055.MODE_ACCONLY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_AMG">
+<span class="sig-name descname"><span class="pre">MODE_AMG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#bno055.BNO055.MODE_AMG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_COMPASS">
+<span class="sig-name descname"><span class="pre">MODE_COMPASS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#bno055.BNO055.MODE_COMPASS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_CONFIG">
+<span class="sig-name descname"><span class="pre">MODE_CONFIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#bno055.BNO055.MODE_CONFIG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_GYRONLY">
+<span class="sig-name descname"><span class="pre">MODE_GYRONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#bno055.BNO055.MODE_GYRONLY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_IMUPLUS">
+<span class="sig-name descname"><span class="pre">MODE_IMUPLUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#bno055.BNO055.MODE_IMUPLUS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_M4G">
+<span class="sig-name descname"><span class="pre">MODE_M4G</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#bno055.BNO055.MODE_M4G" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_MAGGYRO">
+<span class="sig-name descname"><span class="pre">MODE_MAGGYRO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#bno055.BNO055.MODE_MAGGYRO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_MAGONLY">
+<span class="sig-name descname"><span class="pre">MODE_MAGONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#bno055.BNO055.MODE_MAGONLY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_NDOF">
+<span class="sig-name descname"><span class="pre">MODE_NDOF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#bno055.BNO055.MODE_NDOF" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.MODE_NDOF_FMC_OFF">
+<span class="sig-name descname"><span class="pre">MODE_NDOF_FMC_OFF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#bno055.BNO055.MODE_NDOF_FMC_OFF" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.REG_CALIBRATION_DATA">
+<span class="sig-name descname"><span class="pre">REG_CALIBRATION_DATA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">85</span></em><a class="headerlink" href="#bno055.BNO055.REG_CALIBRATION_DATA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.REG_CALIB_STAT">
+<span class="sig-name descname"><span class="pre">REG_CALIB_STAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">53</span></em><a class="headerlink" href="#bno055.BNO055.REG_CALIB_STAT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.REG_EULER_ANGLES">
+<span class="sig-name descname"><span class="pre">REG_EULER_ANGLES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">26</span></em><a class="headerlink" href="#bno055.BNO055.REG_EULER_ANGLES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.REG_GYRO_DATA">
+<span class="sig-name descname"><span class="pre">REG_GYRO_DATA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#bno055.BNO055.REG_GYRO_DATA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.REG_OPR_MODE">
+<span class="sig-name descname"><span class="pre">REG_OPR_MODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">61</span></em><a class="headerlink" href="#bno055.BNO055.REG_OPR_MODE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.S0_CALIBRATION">
+<span class="sig-name descname"><span class="pre">S0_CALIBRATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#bno055.BNO055.S0_CALIBRATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.S1_ANGLES">
+<span class="sig-name descname"><span class="pre">S1_ANGLES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#bno055.BNO055.S1_ANGLES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.S2_VELCOITY">
+<span class="sig-name descname"><span class="pre">S2_VELCOITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#bno055.BNO055.S2_VELCOITY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bno055.BNO055.S3_HOLDING">
+<span class="sig-name descname"><span class="pre">S3_HOLDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#bno055.BNO055.S3_HOLDING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.calibrate_if_needed">
+<span class="sig-name descname"><span class="pre">calibrate_if_needed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.calibrate_if_needed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.calibrate_if_needed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.get_angular_velocity">
+<span class="sig-name descname"><span class="pre">get_angular_velocity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/bno055.html#BNO055.get_angular_velocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.get_angular_velocity" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.get_calibration_data">
+<span class="sig-name descname"><span class="pre">get_calibration_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.get_calibration_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.get_calibration_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.get_calibration_status">
+<span class="sig-name descname"><span class="pre">get_calibration_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/bno055.html#BNO055.get_calibration_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.get_calibration_status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.get_euler_angles">
+<span class="sig-name descname"><span class="pre">get_euler_angles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/bno055.html#BNO055.get_euler_angles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.get_euler_angles" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.initialize_imu">
+<span class="sig-name descname"><span class="pre">initialize_imu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.initialize_imu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.initialize_imu" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.load_calibration">
+<span class="sig-name descname"><span class="pre">load_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'IMUcalibration.txt'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.load_calibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.load_calibration" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.save_calibration">
+<span class="sig-name descname"><span class="pre">save_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'IMUcalibration.txt'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.save_calibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.save_calibration" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.set_mode">
+<span class="sig-name descname"><span class="pre">set_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.set_mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.set_mode" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.task">
+<span class="sig-name descname"><span class="pre">task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shares</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.task" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bno055.BNO055.write_calibration_data">
+<span class="sig-name descname"><span class="pre">write_calibration_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bno055.html#BNO055.write_calibration_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bno055.BNO055.write_calibration_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bump_sensors.html" class="btn btn-neutral float-right" title="bump_sensors module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

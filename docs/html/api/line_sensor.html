@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>line_sensor module &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="HAL module" href="HAL.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#base-chassis">Base Chassis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#microcontroller">Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#wiring-pinout-design">Wiring/Pinout design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#course-objective">Course/Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#final-configuration">Final Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software.html#main">Main</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#key-final-testing-results">Key Final testing results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#challenges">Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#reccomendations">Reccomendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#video-demonstration">Video Demonstration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bno055.html">bno055 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="course.html">course module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="encoder.html">encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="encoder.html#encoder.Encoder"><code class="docutils literal notranslate"><span class="pre">Encoder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoder.html#encoder.to_radians"><code class="docutils literal notranslate"><span class="pre">to_radians()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HAL.html">HAL module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">line_sensor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">API Documentation</a></li>
+      <li class="breadcrumb-item active">line_sensor module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/line_sensor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-line_sensor">
+<span id="line-sensor-module"></span><h1>line_sensor module<a class="headerlink" href="#module-line_sensor" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="line_sensor.LineSensor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">line_sensor.</span></span><span class="sig-name descname"><span class="pre">LineSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/line_sensor.html#LineSensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#line_sensor.LineSensor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.S0_CALIBRATING">
+<span class="sig-name descname"><span class="pre">S0_CALIBRATING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#line_sensor.LineSensor.S0_CALIBRATING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.S2_PROCESSING">
+<span class="sig-name descname"><span class="pre">S2_PROCESSING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#line_sensor.LineSensor.S2_PROCESSING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.SUPER_SAMPLE_COUNT">
+<span class="sig-name descname"><span class="pre">SUPER_SAMPLE_COUNT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#line_sensor.LineSensor.SUPER_SAMPLE_COUNT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.calculate_centroid">
+<span class="sig-name descname"><span class="pre">calculate_centroid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="../_modules/line_sensor.html#LineSensor.calculate_centroid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#line_sensor.LineSensor.calculate_centroid" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.calibrate_step">
+<span class="sig-name descname"><span class="pre">calibrate_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/line_sensor.html#LineSensor.calibrate_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#line_sensor.LineSensor.calibrate_step" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.load_calibration">
+<span class="sig-name descname"><span class="pre">load_calibration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/line_sensor.html#LineSensor.load_calibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#line_sensor.LineSensor.load_calibration" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.read_sampled">
+<span class="sig-name descname"><span class="pre">read_sampled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensor:</span> <span class="pre">&lt;MagicMock</span> <span class="pre">name='mock.ADC'</span> <span class="pre">id='1828325217232'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/line_sensor.html#LineSensor.read_sampled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#line_sensor.LineSensor.read_sampled" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="line_sensor.LineSensor.task">
+<span class="sig-name descname"><span class="pre">task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shares</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/line_sensor.html#LineSensor.task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#line_sensor.LineSensor.task" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="HAL.html" class="btn btn-neutral float-left" title="HAL module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="main module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

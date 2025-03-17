@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tasks module &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#base-chassis">Base Chassis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#microcontroller">Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#wiring-pinout-design">Wiring/Pinout design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#course-objective">Course/Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#final-configuration">Final Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software.html#main">Main</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#key-final-testing-results">Key Final testing results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#challenges">Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#reccomendations">Reccomendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../results.html#video-demonstration">Video Demonstration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bno055.html">bno055 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="course.html">course module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="encoder.html">encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="encoder.html#encoder.Encoder"><code class="docutils literal notranslate"><span class="pre">Encoder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoder.html#encoder.to_radians"><code class="docutils literal notranslate"><span class="pre">to_radians()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HAL.html">HAL module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">tasks module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/tasks.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-tasks">
+<span id="tasks-module"></span><h1>tasks module<a class="headerlink" href="#module-tasks" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="tasks.Shares">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tasks.</span></span><span class="sig-name descname"><span class="pre">Shares</span></span><a class="reference internal" href="../_modules/tasks.html#Shares"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.Shares" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.Shares.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#Shares.build"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.Shares.build" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tasks.TaskBuilder">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tasks.</span></span><span class="sig-name descname"><span class="pre">TaskBuilder</span></span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.all">
+<span class="sig-name descname"><span class="pre">all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.all" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cotask.html#cotask.Task" title="cotask.Task"><span class="pre">Task</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.append"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.append" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.build"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.build" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.cotask">
+<span class="sig-name descname"><span class="pre">cotask</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'cotask'</span> <span class="pre">from</span> <span class="pre">'C:\\Users\\Josep\\OneDrive</span> <span class="pre">-</span> <span class="pre">Cal</span> <span class="pre">Poly\\Winter</span> <span class="pre">25\\ME</span> <span class="pre">405\\ME</span> <span class="pre">405</span> <span class="pre">Lab</span> <span class="pre">W25\\Term</span> <span class="pre">Project\\Python_Code\\cotask.py'&gt;</span></em><a class="headerlink" href="#tasks.TaskBuilder.cotask" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.course">
+<span class="sig-name descname"><span class="pre">course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.course" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.exit">
+<span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.exit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.fail">
+<span class="sig-name descname"><span class="pre">fail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.fail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.fail" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.imu">
+<span class="sig-name descname"><span class="pre">imu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profiler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.imu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.imu" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.line_sensor">
+<span class="sig-name descname"><span class="pre">line_sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.line_sensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.line_sensor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.motor">
+<span class="sig-name descname"><span class="pre">motor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.motor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.motor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.motors">
+<span class="sig-name descname"><span class="pre">motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.motors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.motors" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.run" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tasks.TaskBuilder.vehicle_conrol">
+<span class="sig-name descname"><span class="pre">vehicle_conrol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#TaskBuilder.vehicle_conrol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.TaskBuilder.vehicle_conrol" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
