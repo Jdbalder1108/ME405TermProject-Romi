@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Results &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="api/modules.html" />
+    <link rel="prev" title="Software Architecture" href="software.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#base-chassis">Base Chassis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#microcontroller">Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#wiring-pinout-design">Wiring/Pinout design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#course-objective">Course/Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#final-configuration">Final Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="software.html#main-py">Main.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#prelude-py">Prelude.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#tasks-py">Tasks.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#vehicle-control">Vehicle Control</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project Results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#key-final-testing-results">Key Final testing results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reccomendations">Reccomendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video-demonstration">Video Demonstration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-thoughts">Final Thoughts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/bno055.html">bno055 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/course.html">course module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/encoder.html">encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/encoder.html#encoder.Encoder"><code class="docutils literal notranslate"><span class="pre">Encoder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/encoder.html#encoder.to_radians"><code class="docutils literal notranslate"><span class="pre">to_radians()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/HAL.html">HAL module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Project Results</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/results.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-results">
+<h1>Project Results<a class="headerlink" href="#project-results" title="Link to this heading"></a></h1>
+<p>In this section, we will discuss the results of the project, including the final testing results and any challenges encountered during the testing process.</p>
+<section id="key-final-testing-results">
+<h2>Key Final testing results<a class="headerlink" href="#key-final-testing-results" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The robot almost successfully followed the course using PID control.</p></li>
+<li><p>The line sensor array was able to detect the line with high accuracy.</p></li>
+<li><p>The robot was able to detect and avoid obstacles using bump sensors.</p></li>
+<li><p>The IMU was used to correct the robot’s heading during turns.</p></li>
+<li><p>We found that implementing <strong>super sampling</strong> for the line sensors improved the accuracy of the readings.</p></li>
+</ul>
+</section>
+<section id="challenges">
+<h2>Challenges<a class="headerlink" href="#challenges" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The Romi had trouble following the line in certain areas of the course, particularly in areas with sharp turns or obstacles. The robot also had difficulty maintaining a consistent speed while following the line.</p></li>
+<li><p>The line sensors also had difficulty detecting the line in areas with low contrast, specifically since the line was on a reflective surface.</p></li>
+<li><p>The calculations used for determing heading angles and/or centroid of the line were not always accurate, leading to overshooting or undershooting the line.</p></li>
+</ul>
+</section>
+<section id="reccomendations">
+<h2>Reccomendations<a class="headerlink" href="#reccomendations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>We recommend using a more advanced line-following algorithm, such as a fuzzy logic controller or a neural network, to improve the robot’s performance.</p></li>
+<li><p>We would recommend using a <strong>Kalman filter</strong> to improve the accuracy of the IMU readings.</p></li>
+<li><p>We would also recommend using some type of LED or light source to improve the contrast of the line for the line sensors.</p></li>
+</ul>
+</section>
+<section id="video-demonstration">
+<h2>Video Demonstration<a class="headerlink" href="#video-demonstration" title="Link to this heading"></a></h2>
+<p>This video demonstrates the Romi robot following the course and avoiding obstacles. The robot successfully navigates the majority of the course, but there are some areas where it struggles to maintain a consistent speed and follow the line accurately.
+Since we weren’t strictly tasked with following the line, we used heading control to navigate from checkpoint to checkpoint. The video illustrates that the Romi can sucessfully make it to the wall, but with more time, we could implement the algorithm to make it back to the starting point.</p>
+<video width="80%" controls>
+   <source src="_static/videos/Course-Completion.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video></section>
+<section id="final-thoughts">
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading"></a></h2>
+<dl>
+<dt><strong>Kelly Gruber</strong>:</dt><dd><p>While we were unable to get the robot to complete the course consistantly, we were able to fully implement all of the code required to complete the course sucessfully.
+The struggles of the line sensor’s inconsistancy really put a hamper on our ablity to fine tune and optimize the codebase. I think with better implimentation we would have solved this problem
+One of the implimentations that I saw that was sucessful was turning the sensors analog imput into, digital at a single sensor level, then calculating the centroid of the line.
+I think this would have smoothed out our problems as far as consistantsy with our PID controler for the line sensor, because it was very sensative to any charged to the line
+sensors imput.</p>
+<p>Other than that, I feel like our test driven code base allowed us to write increadably robust code that I am proud of sumbitting.</p>
+</dd>
+<dt><strong>Joseph Balderama</strong>:</dt><dd><p>I think we did a great job of implementing the code and getting the robot to follow the line. However, I think we could have done a better job of testing the robot with different implementation algorithms to see which one worked best.
+I also think we could have done a better job of documenting our code and the testing process. I felt that the surface finish of the track was too reflective and made it difficult for the line sensors to detect the line.
+To account for this, I think we could have further investigated settings and behaviors of the line sensors to improve the detection of the line.</p>
+<p>While we didn’t achieve the desired results, I think we learned a lot from the experience and I am excited to apply what we learned to future projects. I am proud of the work we did and I think we did a great job overall.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="software.html" class="btn btn-neutral float-left" title="Software Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/modules.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
