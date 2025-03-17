@@ -1,0 +1,19 @@
+===========================
+Introduction
+===========================
+
+Welcome to the ME405 **Mechatronics** Term Project!
+
+This project is a **line-following Romi robot** using an STM32 Nucleo board and Python-based control logic.
+
+This project features components and algorithms such as:
+
+- **Line Sensor Array** for path detection.
+
+- **PID Motor Control** for smooth movement.
+
+- **Bump Sensors** for obstacle detection.
+
+- **IMU-Based Heading Correction** for accurate turns.
+
+The following sections will describe the hardware, software, and final results of the project in complete detail.

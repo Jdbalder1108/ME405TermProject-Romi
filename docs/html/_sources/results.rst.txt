@@ -1,0 +1,68 @@
+===========================
+Project Results
+===========================
+
+In this section, we will discuss the results of the project, including the final testing results and any challenges encountered during the testing process.
+
+Key Final testing results
+*************************
+
+- The robot almost successfully followed the course using PID control.
+
+- The line sensor array was able to detect the line with high accuracy.
+
+- The robot was able to detect and avoid obstacles using bump sensors.
+
+- The IMU was used to correct the robot's heading during turns.
+
+- We found that implementing **super sampling** for the line sensors improved the accuracy of the readings.
+
+Challenges
+**********
+
+- The Romi had trouble following the line in certain areas of the course, particularly in areas with sharp turns or obstacles. The robot also had difficulty maintaining a consistent speed while following the line.
+
+- The line sensors also had difficulty detecting the line in areas with low contrast, specifically since the line was on a reflective surface.
+
+- The calculations used for determing heading angles and/or centroid of the line were not always accurate, leading to overshooting or undershooting the line.
+
+Reccomendations
+***************
+
+- We recommend using a more advanced line-following algorithm, such as a fuzzy logic controller or a neural network, to improve the robot's performance.
+
+- We would recommend using a **Kalman filter** to improve the accuracy of the IMU readings.
+
+- We would also recommend using some type of LED or light source to improve the contrast of the line for the line sensors.
+
+Video Demonstration
+*******************
+
+This video demonstrates the Romi robot following the course and avoiding obstacles. The robot successfully navigates the majority of the course, but there are some areas where it struggles to maintain a consistent speed and follow the line accurately. 
+Since we weren't strictly tasked with following the line, we used heading control to navigate from checkpoint to checkpoint. The video illustrates that the Romi can sucessfully make it to the wall, but with more time, we could implement the algorithm to make it back to the starting point. 
+
+.. raw:: html
+
+   <video width="80%" controls>
+      <source src="_static/videos/Course-Completion.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+
+Final Thoughts
+**************
+**Kelly Gruber**:
+    While we were unable to get the robot to complete the course consistantly, we were able to fully implement all of the code required to complete the course sucessfully.
+    The struggles of the line sensor's inconsistancy really put a hamper on our ablity to fine tune and optimize the codebase. I think with better implimentation we would have solved this problem
+    One of the implimentations that I saw that was sucessful was turning the sensors analog imput into, digital at a single sensor level, then calculating the centroid of the line. 
+    I think this would have smoothed out our problems as far as consistantsy with our PID controler for the line sensor, because it was very sensative to any charged to the line
+    sensors imput.
+
+    Other than that, I feel like our test driven code base allowed us to write increadably robust code that I am proud of sumbitting.
+
+**Joseph Balderama**:
+   I think we did a great job of implementing the code and getting the robot to follow the line. However, I think we could have done a better job of testing the robot with different implementation algorithms to see which one worked best.
+   I also think we could have done a better job of documenting our code and the testing process. I felt that the surface finish of the track was too reflective and made it difficult for the line sensors to detect the line. 
+   To account for this, I think we could have further investigated settings and behaviors of the line sensors to improve the detection of the line.
+   
+   While we didn't achieve the desired results, I think we learned a lot from the experience and I am excited to apply what we learned to future projects. I am proud of the work we did and I think we did a great job overall.

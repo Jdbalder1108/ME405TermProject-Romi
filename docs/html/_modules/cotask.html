@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cotask &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/bno055.html">bno055 module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.I2C_ADDR"><code class="docutils literal notranslate"><span class="pre">BNO055.I2C_ADDR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_ACCGYRO"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_ACCGYRO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_ACCMAG"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_ACCMAG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_ACCONLY"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_ACCONLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_AMG"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_AMG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_COMPASS"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_COMPASS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_CONFIG"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_CONFIG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_GYRONLY"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_GYRONLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_IMUPLUS"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_IMUPLUS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_M4G"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_M4G</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_MAGGYRO"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_MAGGYRO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_MAGONLY"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_MAGONLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_NDOF"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_NDOF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_NDOF_FMC_OFF"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_NDOF_FMC_OFF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_CALIBRATION_DATA"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_CALIBRATION_DATA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_CALIB_STAT"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_CALIB_STAT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_EULER_ANGLES"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_EULER_ANGLES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_GYRO_DATA"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_GYRO_DATA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_OPR_MODE"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_OPR_MODE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S0_CALIBRATION"><code class="docutils literal notranslate"><span class="pre">BNO055.S0_CALIBRATION</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S1_ANGLES"><code class="docutils literal notranslate"><span class="pre">BNO055.S1_ANGLES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S2_VELCOITY"><code class="docutils literal notranslate"><span class="pre">BNO055.S2_VELCOITY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S3_HOLDING"><code class="docutils literal notranslate"><span class="pre">BNO055.S3_HOLDING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.calibrate_if_needed"><code class="docutils literal notranslate"><span class="pre">BNO055.calibrate_if_needed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_angular_velocity"><code class="docutils literal notranslate"><span class="pre">BNO055.get_angular_velocity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_calibration_data"><code class="docutils literal notranslate"><span class="pre">BNO055.get_calibration_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_calibration_status"><code class="docutils literal notranslate"><span class="pre">BNO055.get_calibration_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_euler_angles"><code class="docutils literal notranslate"><span class="pre">BNO055.get_euler_angles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.initialize_imu"><code class="docutils literal notranslate"><span class="pre">BNO055.initialize_imu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.load_calibration"><code class="docutils literal notranslate"><span class="pre">BNO055.load_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.save_calibration"><code class="docutils literal notranslate"><span class="pre">BNO055.save_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.set_mode"><code class="docutils literal notranslate"><span class="pre">BNO055.set_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.task"><code class="docutils literal notranslate"><span class="pre">BNO055.task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.write_calibration_data"><code class="docutils literal notranslate"><span class="pre">BNO055.write_calibration_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.any_pressed"><code class="docutils literal notranslate"><span class="pre">BumpSensor.any_pressed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.bump_callback"><code class="docutils literal notranslate"><span class="pre">BumpSensor.bump_callback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.get_bump_flag_share"><code class="docutils literal notranslate"><span class="pre">BumpSensor.get_bump_flag_share()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.get_collision_side"><code class="docutils literal notranslate"><span class="pre">BumpSensor.get_collision_side()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.pyb"><code class="docutils literal notranslate"><span class="pre">BumpSensor.pyb</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.reset_flag"><code class="docutils literal notranslate"><span class="pre">BumpSensor.reset_flag()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/closed_loop.html#closed_loop.ClosedLoop.update"><code class="docutils literal notranslate"><span class="pre">ClosedLoop.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/course.html">course module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S100_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S100_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S100_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S100_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S10_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S10_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S10_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S10_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S110_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S110_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S110_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S110_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S120_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S120_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S120_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S120_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S20_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S20_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S20_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S20_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S30_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S30_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S30_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S30_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S40_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S40_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S40_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S40_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S45_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S45_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S50_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S50_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S5_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S5_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S60_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S60_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S60_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S60_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.debug_print"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.debug_print()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.default_button"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.default_button()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.get_around_wall"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.get_around_wall()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.task"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.task()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/encoder.html">encoder module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/HAL.html">HAL module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.BLUE_TOOTH"><code class="docutils literal notranslate"><span class="pre">HAL.BLUE_TOOTH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.ENCODER"><code class="docutils literal notranslate"><span class="pre">HAL.ENCODER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.LINE_SENSOR"><code class="docutils literal notranslate"><span class="pre">HAL.LINE_SENSOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.MOTOR"><code class="docutils literal notranslate"><span class="pre">HAL.MOTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.S0_CALIBRATING"><code class="docutils literal notranslate"><span class="pre">LineSensor.S0_CALIBRATING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.S2_PROCESSING"><code class="docutils literal notranslate"><span class="pre">LineSensor.S2_PROCESSING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.SUPER_SAMPLE_COUNT"><code class="docutils literal notranslate"><span class="pre">LineSensor.SUPER_SAMPLE_COUNT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.calculate_centroid"><code class="docutils literal notranslate"><span class="pre">LineSensor.calculate_centroid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.calibrate_step"><code class="docutils literal notranslate"><span class="pre">LineSensor.calibrate_step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.load_calibration"><code class="docutils literal notranslate"><span class="pre">LineSensor.load_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.read_sampled"><code class="docutils literal notranslate"><span class="pre">LineSensor.read_sampled()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.task"><code class="docutils literal notranslate"><span class="pre">LineSensor.task()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/main.html">main module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.S0_STOP"><code class="docutils literal notranslate"><span class="pre">MotorControl.S0_STOP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.S1_LINE_PID_CALC"><code class="docutils literal notranslate"><span class="pre">MotorControl.S1_LINE_PID_CALC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.S2_HEADING_PID_CALC"><code class="docutils literal notranslate"><span class="pre">MotorControl.S2_HEADING_PID_CALC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.pid"><code class="docutils literal notranslate"><span class="pre">MotorControl.pid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.task"><code class="docutils literal notranslate"><span class="pre">MotorControl.task()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">cotask</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for cotask</h1><div class="highlight"><pre>
+<span></span><span class="c1">## @file cotask.py</span>
+<span class="c1">#  This file contains classes to run cooperatively scheduled tasks in a</span>
+<span class="c1">#  multitasking system.</span>
+<span class="c1">#</span>
+<span class="c1">#  Tasks are created as generators, functions which have infinite loops and call</span>
+<span class="c1">#  @c yield at least once in the loop. References to all the tasks to be run</span>
+<span class="c1">#  in the system are kept in a list maintained by class @c CoTaskList; the </span>
+<span class="c1">#  system scheduler then runs the tasks&#39; @c run() methods according to a </span>
+<span class="c1">#  chosen scheduling algorithm such as round-robin or highest-priority-first. </span>
+<span class="c1"># </span>
+<span class="c1">#  @author JR Ridgely</span>
+<span class="c1">#  @date   2017-Jan-01 JRR Approximate date of creation of file</span>
+<span class="c1">#  @date   2021-Dec-18 JRR Docstrings modified to work without DoxyPyPy</span>
+<span class="c1">#  @copyright This program is copyright (c) 2017-2023 by JR Ridgely and</span>
+<span class="c1">#             released under the GNU Public License, version 3.0.</span>
+<span class="c1"># </span>
+<span class="c1">#  It is intended for educational use only, but its use is not limited thereto.</span>
+<span class="c1">#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span>
+<span class="c1">#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span>
+<span class="c1">#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span>
+<span class="c1">#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE</span>
+<span class="c1">#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span>
+<span class="c1">#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span>
+<span class="c1">#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span>
+<span class="c1">#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span>
+<span class="c1">#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span>
+<span class="c1">#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span>
+<span class="c1">#  POSSIBILITY OF SUCH DAMAGE.</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>                              <span class="c1"># Memory allocation garbage collector</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">utime</span>                           <span class="c1"># Micropython version of time library</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">micropython</span>                     <span class="c1"># This shuts up incorrect warnings</span>
+
+
+<span class="c1">## Implements multitasking with scheduling and some performance logging.</span>
+<span class="c1">#</span>
+<span class="c1">#  This class implements behavior common to tasks in a cooperative </span>
+<span class="c1">#  multitasking system which runs in MicroPython. The ability to be scheduled</span>
+<span class="c1">#  on the basis of time or an external software trigger or interrupt is </span>
+<span class="c1">#  implemented, state transitions can be recorded, and run times can be</span>
+<span class="c1">#  profiled. The user&#39;s task code must be implemented in a generator which</span>
+<span class="c1">#  yields the state (and the CPU) after it has run for a short and bounded </span>
+<span class="c1">#  period of time. </span>
+<span class="c1">#</span>
+<span class="c1">#  @b Example:</span>
+<span class="c1">#    @code</span>
+<span class="c1">#       def task1_fun ():</span>
+<span class="c1">#            &#39;&#39;&#39;! This function switches states repeatedly for no reason &#39;&#39;&#39;</span>
+<span class="c1">#            state = 0</span>
+<span class="c1">#            while True:</span>
+<span class="c1">#                if state == 0:</span>
+<span class="c1">#                    state = 1</span>
+<span class="c1">#                elif state == 1:</span>
+<span class="c1">#                    state = 0</span>
+<span class="c1">#                yield (state)</span>
+<span class="c1"># </span>
+<span class="c1">#        # In main routine, create this task and set it to run twice per second</span>
+<span class="c1">#        task1 = cotask.Task (task1_fun, name = &#39;Task 1&#39;, priority = 1, </span>
+<span class="c1">#                             period = 500, profile = True, trace = True)</span>
+<span class="c1">#</span>
+<span class="c1">#        # Add the task to the list (so it will be run) and run scheduler</span>
+<span class="c1">#        cotask.task_list.append (task1)</span>
+<span class="c1">#        while True: </span>
+<span class="c1">#            cotask.task_list.pri_sched ()</span>
+<span class="c1">#    @endcode</span>
+<div class="viewcode-block" id="Task">
+<a class="viewcode-back" href="../api/cotask.html#cotask.Task">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Task</span><span class="p">:</span>
+
+    <span class="c1">## Initialize a task object so it may be run by the scheduler.</span>
+    <span class="c1"># </span>
+    <span class="c1">#  This method initializes a task object, saving copies of constructor</span>
+    <span class="c1">#  parameters and preparing an empty dictionary for states.</span>
+    <span class="c1"># </span>
+    <span class="c1">#  @param run_fun The function which implements the task&#39;s code. It must</span>
+    <span class="c1">#         be a generator which yields the current state.</span>
+    <span class="c1">#  @param name The name of the task, by default @c NoName. This should</span>
+    <span class="c1">#         be overridden with a more descriptive name by the programmer.</span>
+    <span class="c1">#  @param priority The priority of the task, a positive integer with</span>
+    <span class="c1">#         higher numbers meaning higher priority (default 0)</span>
+    <span class="c1">#  @param period The time in milliseconds between runs of the task if it&#39;s</span>
+    <span class="c1">#         run by a timer or @c None if the task is not run by a timer.</span>
+    <span class="c1">#         The time can be given in a @c float or @c int; it will be </span>
+    <span class="c1">#         converted to microseconds for internal use by the scheduler.</span>
+    <span class="c1">#  @param profile Set to @c True to enable run-time profiling </span>
+    <span class="c1">#  @param trace Set to @c True to generate a list of transitions between</span>
+    <span class="c1">#         states. @b Note: This slows things down and allocates memory.</span>
+    <span class="c1">#  @param shares A list or tuple of shares and queues used by this task.</span>
+    <span class="c1">#         If no list is given, no shares are passed to the task</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_fun</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NoName&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">profile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">shares</span><span class="o">=</span><span class="p">()):</span>
+        <span class="c1"># The function which is run to implement this task&#39;s code. Since it </span>
+        <span class="c1"># is a generator, we &quot;run&quot; it here, which doesn&#39;t actually run it but</span>
+        <span class="c1"># gets it going as a generator which is ready to yield values</span>
+        <span class="k">if</span> <span class="n">shares</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_gen</span> <span class="o">=</span> <span class="n">run_fun</span><span class="p">(</span><span class="n">shares</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_gen</span> <span class="o">=</span> <span class="n">run_fun</span><span class="p">()</span>
+
+        <span class="c1">## The name of the task, hopefully a short and descriptive string.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+        <span class="c1">## The task&#39;s priority, an integer with higher numbers meaning higher </span>
+        <span class="c1">#  priority. </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">priority</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">priority</span><span class="p">)</span>
+
+        <span class="c1">## The period, in milliseconds, between runs of the task&#39;s @c run()</span>
+        <span class="c1">#  method. If the period is @c None, the @c run() method won&#39;t be run</span>
+        <span class="c1">#  on a time basis but will instead be run by the scheduler as soon</span>
+        <span class="c1">#  as feasible after code such as an interrupt handler calls the </span>
+        <span class="c1">#  @c go() method. </span>
+        <span class="k">if</span> <span class="n">period</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">period</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_next_run</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="n">period</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_next_run</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Flag which causes the task to be profiled, in which the execution</span>
+        <span class="c1">#  time of the @c run() method is measured and basic statistics kept. </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_prof</span> <span class="o">=</span> <span class="n">profile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_profile</span><span class="p">()</span>
+
+        <span class="c1"># The previous state in which the task last ran. It is used to watch</span>
+        <span class="c1"># for and track state transitions.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_prev_state</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># If transition tracing has been enabled, create an empty list in </span>
+        <span class="c1"># which to store transition (time, to-state) stamps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span> <span class="o">=</span> <span class="n">trace</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tr_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_prev_time</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span>
+
+        <span class="c1">## Flag which is set true when the task is ready to be run by the</span>
+        <span class="c1">#  scheduler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">go_flag</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+    <span class="c1">## This method is called by the scheduler; it attempts to run this task.</span>
+    <span class="c1">#  If the task is not yet ready to run, this method returns @c False</span>
+    <span class="c1">#  immediately; if this task is ready to run, it runs the task&#39;s generator</span>
+    <span class="c1">#  up to the next @c yield() and then returns @c True.</span>
+    <span class="c1"># </span>
+    <span class="c1">#  @return @c True if the task ran or @c False if it did not</span>
+<div class="viewcode-block" id="Task.schedule">
+<a class="viewcode-back" href="../api/cotask.html#cotask.Task.schedule">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ready</span><span class="p">():</span>
+
+            <span class="c1"># Reset the go flag for the next run</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">go_flag</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="c1"># If profiling, save the start time</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prof</span><span class="p">:</span>
+                <span class="n">stime</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span>
+
+            <span class="c1"># Run the method belonging to the state which should be run next</span>
+            <span class="n">curr_state</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_gen</span><span class="p">)</span>
+
+            <span class="c1"># If profiling or tracing, save timing data</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prof</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span><span class="p">:</span>
+                <span class="n">etime</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span>
+
+            <span class="c1"># If profiling, save timing data</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prof</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_runs</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">runt</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">etime</span><span class="p">,</span> <span class="n">stime</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runs</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_run_sum</span> <span class="o">+=</span> <span class="n">runt</span>
+                    <span class="k">if</span> <span class="n">runt</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slowest</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_slowest</span> <span class="o">=</span> <span class="n">runt</span>
+
+            <span class="c1"># If transition logic tracing is on, record a transition; if not,</span>
+            <span class="c1"># ignore the state. If out of memory, switch tracing off and </span>
+            <span class="c1"># run the memory allocation garbage collector</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">curr_state</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prev_state</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_tr_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                            <span class="p">(</span><span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">etime</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prev_time</span><span class="p">),</span>
+                             <span class="n">curr_state</span><span class="p">))</span>
+                <span class="k">except</span> <span class="ne">MemoryError</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_prev_state</span> <span class="o">=</span> <span class="n">curr_state</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_prev_time</span> <span class="o">=</span> <span class="n">etime</span>
+
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+    <span class="c1">## This method checks if the task is ready to run.</span>
+    <span class="c1">#  If the task runs on a timer, this method checks what time it is; if not,</span>
+    <span class="c1">#  this method checks the flag which indicates that the task is ready to</span>
+    <span class="c1">#  go. This method may be overridden in descendent classes to implement</span>
+    <span class="c1">#  some other behavior.</span>
+    <span class="nd">@micropython</span><span class="o">.</span><span class="n">native</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ready</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="c1"># If this task uses a timer, check if it&#39;s time to run run() again. If</span>
+        <span class="c1"># so, set go flag and set the timer to go off at the next run time</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">late</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_run</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">late</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">go_flag</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_next_run</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">period</span><span class="p">,</span> 
+                                                  <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">_next_run</span><span class="p">)</span>
+
+                <span class="c1"># If keeping a latency profile, record the data</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prof</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_late_sum</span> <span class="o">+=</span> <span class="n">late</span>
+                    <span class="k">if</span> <span class="n">late</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_latest</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_latest</span> <span class="o">=</span> <span class="n">late</span>
+
+        <span class="c1"># If the task doesn&#39;t use a timer, we rely on go_flag to signal ready</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">go_flag</span>
+
+
+    <span class="c1">## This method sets the period between runs of the task to the given</span>
+    <span class="c1">#  number of milliseconds, or @c None if the task is triggered by calls</span>
+    <span class="c1">#  to @c go() rather than time.</span>
+    <span class="c1">#  @param new_period The new period in milliseconds between task runs</span>
+<div class="viewcode-block" id="Task.set_period">
+<a class="viewcode-back" href="../api/cotask.html#cotask.Task.set_period">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_period</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_period</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">new_period</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">new_period</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span></div>
+
+
+
+    <span class="c1">## This method resets the variables used for execution time profiling.</span>
+    <span class="c1">#  This method is also used by @c __init__() to create the variables.</span>
+<div class="viewcode-block" id="Task.reset_profile">
+<a class="viewcode-back" href="../api/cotask.html#cotask.Task.reset_profile">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_runs</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run_sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_slowest</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_late_sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_latest</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+
+    <span class="c1">## This method returns a string containing the task&#39;s transition trace.</span>
+    <span class="c1">#  The trace is a set of tuples, each of which contains a time and the</span>
+    <span class="c1">#  states from and to which the system transitioned. </span>
+    <span class="c1">#  @return A possibly quite large string showing state transitions</span>
+<div class="viewcode-block" id="Task.get_trace">
+<a class="viewcode-back" href="../api/cotask.html#cotask.Task.get_trace">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">tr_str</span> <span class="o">=</span> <span class="s1">&#39;Task &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trace</span><span class="p">:</span>
+            <span class="n">tr_str</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">last_state</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">total_time</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tr_data</span><span class="p">:</span>
+                <span class="n">total_time</span> <span class="o">+=</span> <span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1000000.0</span>
+                <span class="n">tr_str</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="si">{: 12.6f}</span><span class="s1">: </span><span class="si">{: 2d}</span><span class="s1"> -&gt; </span><span class="si">{:d}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span> <span class="p">(</span><span class="n">total_time</span><span class="p">,</span> 
+                    <span class="n">last_state</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">last_state</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tr_str</span> <span class="o">+=</span> <span class="s1">&#39; not traced&#39;</span>
+        <span class="k">return</span> <span class="n">tr_str</span></div>
+
+
+
+    <span class="c1">## Method to set a flag so that this task indicates that it&#39;s ready to run.</span>
+    <span class="c1">#  This method may be called from an interrupt service routine or from</span>
+    <span class="c1">#  another task which has data that this task needs to process soon.</span>
+<div class="viewcode-block" id="Task.go">
+<a class="viewcode-back" href="../api/cotask.html#cotask.Task.go">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">go</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">go_flag</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+
+
+    <span class="c1">## This method converts the task to a string for diagnostic use.</span>
+    <span class="c1">#  It shows information about the task, including execution time</span>
+    <span class="c1">#  profiling results if profiling has been done.</span>
+    <span class="c1">#  @returns The string which represents the task</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">rst</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;16s</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">priority</span><span class="si">:</span><span class="s2"> 4d</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">rst</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">period</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">)</span><span class="si">:</span><span class="s2"> 10.1f</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="n">rst</span> <span class="o">+=</span> <span class="s1">&#39;         -&#39;</span>
+        <span class="n">rst</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_runs</span><span class="si">:</span><span class="s2"> 8d</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prof</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runs</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">avg_dur</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_sum</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runs</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0</span>
+            <span class="n">avg_late</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_late_sum</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runs</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0</span>
+            <span class="n">rst</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">avg_dur</span><span class="si">:</span><span class="s2"> 10.3f</span><span class="si">}{</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_slowest</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">)</span><span class="si">:</span><span class="s2"> 10.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">rst</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">avg_late</span><span class="si">:</span><span class="s2"> 10.3f</span><span class="si">}{</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_latest</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">)</span><span class="si">:</span><span class="s2"> 10.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">rst</span></div>
+
+
+
+<span class="c1"># =============================================================================</span>
+
+<span class="c1">## A list of tasks used internally by the task scheduler.</span>
+<span class="c1">#  This class holds the list of tasks which will be run by the task scheduler.</span>
+<span class="c1">#  The task list is usually not directly used by the programmer except when</span>
+<span class="c1">#  tasks are added to it and the scheduler is called. An example showing the</span>
+<span class="c1">#  use of the task list is given in the last few lines of the documentation</span>
+<span class="c1">#  for class @c Task. </span>
+<span class="c1"># </span>
+<span class="c1">#  The task list is sorted by priority so that the scheduler can efficiently</span>
+<span class="c1">#  look through the list to find the highest priority task which is ready to</span>
+<span class="c1">#  run at any given time. Tasks can also be scheduled in a simpler</span>
+<span class="c1">#  &quot;round-robin&quot; fashion.</span>
+<div class="viewcode-block" id="TaskList">
+<a class="viewcode-back" href="../api/cotask.html#cotask.TaskList">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TaskList</span><span class="p">:</span>
+
+    <span class="c1">## Initialize the task list. This creates the list of priorities in</span>
+    <span class="c1">#  which tasks will be organized by priority.</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1">## The list of priority lists. Each priority for which at least one </span>
+        <span class="c1">#  task has been created has a list whose first element is a task </span>
+        <span class="c1">#  priority and whose other elements are references to task objects at</span>
+        <span class="c1">#  that priority. </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+    <span class="c1">## Append a task to the task list. The list will be sorted by task </span>
+    <span class="c1">#  priorities so that the scheduler can quickly find the highest priority</span>
+    <span class="c1">#  task which is ready to run at any given time. </span>
+    <span class="c1">#  @param task The task to be appended to the list</span>
+<div class="viewcode-block" id="TaskList.append">
+<a class="viewcode-back" href="../api/cotask.html#cotask.TaskList.append">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
+        <span class="c1"># See if there&#39;s a tasklist with the given priority in the main list</span>
+        <span class="n">new_pri</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">priority</span>
+        <span class="k">for</span> <span class="n">pri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span><span class="p">:</span>
+            <span class="c1"># If a tasklist with this priority exists, add this task to it.</span>
+            <span class="k">if</span> <span class="n">pri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">new_pri</span><span class="p">:</span>
+                <span class="n">pri</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+                <span class="k">break</span>
+
+        <span class="c1"># If the priority isn&#39;t in the list, this else clause starts a new </span>
+        <span class="c1"># priority list with this task as first one. A priority list has the</span>
+        <span class="c1"># priority as element 0, an index into the list of tasks (used for</span>
+        <span class="c1"># round-robin scheduling those tasks) as the second item, and tasks</span>
+        <span class="c1"># after those</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">new_pri</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">task</span><span class="p">])</span>
+
+        <span class="c1"># Make sure the main list (of lists at each priority) is sorted</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pri</span><span class="p">:</span> <span class="n">pri</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+
+    <span class="c1">## Run tasks in order, ignoring the tasks&#39; priorities.</span>
+    <span class="c1">#</span>
+    <span class="c1">#  This scheduling method runs tasks in a round-robin fashion. Each</span>
+    <span class="c1">#  time it is called, it goes through the list of tasks and gives each of</span>
+    <span class="c1">#  them a chance to run. Although this scheduler first runs higher priority</span>
+    <span class="c1">#  tasks first, that has no significant effect in the long run, as all the</span>
+    <span class="c1">#  tasks are given a chance to run each time through the list, and it takes</span>
+    <span class="c1">#  about the same amount of time before each is given a chance to run </span>
+    <span class="c1">#  again.</span>
+    <span class="nd">@micropython</span><span class="o">.</span><span class="n">native</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rr_sched</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># For each priority level, run all tasks at that level</span>
+        <span class="k">for</span> <span class="n">pri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">pri</span><span class="p">[</span><span class="mi">2</span><span class="p">:]:</span>
+                <span class="n">task</span><span class="o">.</span><span class="n">schedule</span><span class="p">()</span>
+
+
+    <span class="c1">## Run tasks according to their priorities.</span>
+    <span class="c1">#</span>
+    <span class="c1">#  This scheduler runs tasks in a priority based fashion. Each time it is</span>
+    <span class="c1">#  called, it finds the highest priority task which is ready to run and</span>
+    <span class="c1">#  calls that task&#39;s @c run() method.</span>
+    <span class="nd">@micropython</span><span class="o">.</span><span class="n">native</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pri_sched</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Go down the list of priorities, beginning with the highest</span>
+        <span class="k">for</span> <span class="n">pri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span><span class="p">:</span>
+            <span class="c1"># Within each priority list, run tasks in round-robin order</span>
+            <span class="c1"># Each priority list is [priority, index, task, task, ...] where</span>
+            <span class="c1"># index is the index of the next task in the list to be run</span>
+            <span class="n">tries</span> <span class="o">=</span> <span class="mi">2</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pri</span><span class="p">)</span>
+            <span class="k">while</span> <span class="n">tries</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">:</span>
+                <span class="n">ran</span> <span class="o">=</span> <span class="n">pri</span><span class="p">[</span><span class="n">pri</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">schedule</span><span class="p">()</span>
+                <span class="n">tries</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">pri</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">pri</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">length</span><span class="p">:</span>
+                    <span class="n">pri</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+                <span class="k">if</span> <span class="n">ran</span><span class="p">:</span>
+                    <span class="k">return</span>
+
+
+    <span class="c1">## Create some diagnostic text showing the tasks in the task list.</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ret_str</span> <span class="o">=</span> <span class="s1">&#39;TASK             PRI    PERIOD    RUNS   AVG DUR   MAX &#39;</span> \
+            <span class="s1">&#39;DUR  AVG LATE  MAX LATE</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">for</span> <span class="n">pri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pri_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">pri</span><span class="p">[</span><span class="mi">2</span><span class="p">:]:</span>
+                <span class="n">ret_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="n">ret_str</span></div>
+
+
+
+<span class="c1">## This is @b the main task list which is created for scheduling when </span>
+<span class="c1">#  @c cotask.py is imported into a program. </span>
+<span class="n">task_list</span> <span class="o">=</span> <span class="n">TaskList</span><span class="p">()</span>
+
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

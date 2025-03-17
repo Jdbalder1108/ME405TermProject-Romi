@@ -1,0 +1,7 @@
+line\_sensor module
+===================
+
+.. automodule:: line_sensor
+   :members:
+   :show-inheritance:
+   :undoc-members:

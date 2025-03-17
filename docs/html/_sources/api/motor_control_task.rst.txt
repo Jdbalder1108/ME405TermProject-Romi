@@ -1,0 +1,7 @@
+motor\_control\_task module
+===========================
+
+.. automodule:: motor_control_task
+   :members:
+   :show-inheritance:
+   :undoc-members:

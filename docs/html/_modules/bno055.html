@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bno055 &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/bno055.html">bno055 module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.I2C_ADDR"><code class="docutils literal notranslate"><span class="pre">BNO055.I2C_ADDR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_ACCGYRO"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_ACCGYRO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_ACCMAG"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_ACCMAG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_ACCONLY"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_ACCONLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_AMG"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_AMG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_COMPASS"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_COMPASS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_CONFIG"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_CONFIG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_GYRONLY"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_GYRONLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_IMUPLUS"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_IMUPLUS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_M4G"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_M4G</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_MAGGYRO"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_MAGGYRO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_MAGONLY"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_MAGONLY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_NDOF"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_NDOF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.MODE_NDOF_FMC_OFF"><code class="docutils literal notranslate"><span class="pre">BNO055.MODE_NDOF_FMC_OFF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_CALIBRATION_DATA"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_CALIBRATION_DATA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_CALIB_STAT"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_CALIB_STAT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_EULER_ANGLES"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_EULER_ANGLES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_GYRO_DATA"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_GYRO_DATA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.REG_OPR_MODE"><code class="docutils literal notranslate"><span class="pre">BNO055.REG_OPR_MODE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S0_CALIBRATION"><code class="docutils literal notranslate"><span class="pre">BNO055.S0_CALIBRATION</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S1_ANGLES"><code class="docutils literal notranslate"><span class="pre">BNO055.S1_ANGLES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S2_VELCOITY"><code class="docutils literal notranslate"><span class="pre">BNO055.S2_VELCOITY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.S3_HOLDING"><code class="docutils literal notranslate"><span class="pre">BNO055.S3_HOLDING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.calibrate_if_needed"><code class="docutils literal notranslate"><span class="pre">BNO055.calibrate_if_needed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_angular_velocity"><code class="docutils literal notranslate"><span class="pre">BNO055.get_angular_velocity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_calibration_data"><code class="docutils literal notranslate"><span class="pre">BNO055.get_calibration_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_calibration_status"><code class="docutils literal notranslate"><span class="pre">BNO055.get_calibration_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.get_euler_angles"><code class="docutils literal notranslate"><span class="pre">BNO055.get_euler_angles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.initialize_imu"><code class="docutils literal notranslate"><span class="pre">BNO055.initialize_imu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.load_calibration"><code class="docutils literal notranslate"><span class="pre">BNO055.load_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.save_calibration"><code class="docutils literal notranslate"><span class="pre">BNO055.save_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.set_mode"><code class="docutils literal notranslate"><span class="pre">BNO055.set_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.task"><code class="docutils literal notranslate"><span class="pre">BNO055.task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055.write_calibration_data"><code class="docutils literal notranslate"><span class="pre">BNO055.write_calibration_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.any_pressed"><code class="docutils literal notranslate"><span class="pre">BumpSensor.any_pressed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.bump_callback"><code class="docutils literal notranslate"><span class="pre">BumpSensor.bump_callback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.get_bump_flag_share"><code class="docutils literal notranslate"><span class="pre">BumpSensor.get_bump_flag_share()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.get_collision_side"><code class="docutils literal notranslate"><span class="pre">BumpSensor.get_collision_side()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.pyb"><code class="docutils literal notranslate"><span class="pre">BumpSensor.pyb</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor.reset_flag"><code class="docutils literal notranslate"><span class="pre">BumpSensor.reset_flag()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/closed_loop.html#closed_loop.ClosedLoop.update"><code class="docutils literal notranslate"><span class="pre">ClosedLoop.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/course.html">course module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S100_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S100_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S100_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S100_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S10_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S10_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S10_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S10_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S110_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S110_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S110_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S110_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S120_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S120_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S120_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S120_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S20_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S20_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S20_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S20_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S30_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S30_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S30_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S30_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S40_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S40_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S40_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S40_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S45_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S45_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S50_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S50_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S5_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S5_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S60_DISTANCE_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S60_DISTANCE_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.S60_HEADING_SET_POINT"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.S60_HEADING_SET_POINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.debug_print"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.debug_print()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.default_button"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.default_button()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.get_around_wall"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.get_around_wall()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion.task"><code class="docutils literal notranslate"><span class="pre">CourseCompletion.task()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/encoder.html">encoder module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/HAL.html">HAL module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.BLUE_TOOTH"><code class="docutils literal notranslate"><span class="pre">HAL.BLUE_TOOTH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.ENCODER"><code class="docutils literal notranslate"><span class="pre">HAL.ENCODER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.LINE_SENSOR"><code class="docutils literal notranslate"><span class="pre">HAL.LINE_SENSOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL.MOTOR"><code class="docutils literal notranslate"><span class="pre">HAL.MOTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.S0_CALIBRATING"><code class="docutils literal notranslate"><span class="pre">LineSensor.S0_CALIBRATING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.S2_PROCESSING"><code class="docutils literal notranslate"><span class="pre">LineSensor.S2_PROCESSING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.SUPER_SAMPLE_COUNT"><code class="docutils literal notranslate"><span class="pre">LineSensor.SUPER_SAMPLE_COUNT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.calculate_centroid"><code class="docutils literal notranslate"><span class="pre">LineSensor.calculate_centroid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.calibrate_step"><code class="docutils literal notranslate"><span class="pre">LineSensor.calibrate_step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.load_calibration"><code class="docutils literal notranslate"><span class="pre">LineSensor.load_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.read_sampled"><code class="docutils literal notranslate"><span class="pre">LineSensor.read_sampled()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor.task"><code class="docutils literal notranslate"><span class="pre">LineSensor.task()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/main.html">main module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.S0_STOP"><code class="docutils literal notranslate"><span class="pre">MotorControl.S0_STOP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.S1_LINE_PID_CALC"><code class="docutils literal notranslate"><span class="pre">MotorControl.S1_LINE_PID_CALC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.S2_HEADING_PID_CALC"><code class="docutils literal notranslate"><span class="pre">MotorControl.S2_HEADING_PID_CALC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.pid"><code class="docutils literal notranslate"><span class="pre">MotorControl.pid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl.task"><code class="docutils literal notranslate"><span class="pre">MotorControl.task()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bno055</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bno055</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">HAL</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">task_share</span><span class="w"> </span><span class="kn">import</span> <span class="n">Share</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>
+
+
+<div class="viewcode-block" id="BNO055">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BNO055</span><span class="p">:</span>
+    <span class="c1"># BNO055 I2C Address</span>
+    <span class="n">I2C_ADDR</span> <span class="o">=</span> <span class="mh">0x28</span>
+
+    <span class="c1"># Register addresses</span>
+    <span class="n">REG_OPR_MODE</span> <span class="o">=</span> <span class="mh">0x3D</span>  <span class="c1"># Operation Mode Register</span>
+    <span class="n">REG_CALIB_STAT</span> <span class="o">=</span> <span class="mh">0x35</span>  <span class="c1"># Calibration Status Register</span>
+    <span class="n">REG_EULER_ANGLES</span> <span class="o">=</span> <span class="mh">0x1A</span>  <span class="c1"># Euler Angles Data Register</span>
+    <span class="n">REG_GYRO_DATA</span> <span class="o">=</span> <span class="mh">0x14</span>  <span class="c1"># Gyroscope Data Register</span>
+    <span class="n">REG_CALIBRATION_DATA</span> <span class="o">=</span> <span class="mh">0x55</span>  <span class="c1"># Starting register for calibration coefficients</span>
+
+    <span class="c1"># BNO055 Modes </span>
+    <span class="n">MODE_CONFIG</span> <span class="o">=</span> <span class="mh">0x00</span>          <span class="c1"># Configuration mode</span>
+    <span class="n">MODE_ACCONLY</span> <span class="o">=</span> <span class="mh">0x01</span>         <span class="c1"># Accelerometer only mode</span>
+    <span class="n">MODE_MAGONLY</span> <span class="o">=</span> <span class="mh">0x02</span>         <span class="c1"># Magnetometer only mode</span>
+    <span class="n">MODE_GYRONLY</span> <span class="o">=</span> <span class="mh">0x03</span>         <span class="c1"># Gyroscope only mode</span>
+    <span class="n">MODE_ACCMAG</span> <span class="o">=</span> <span class="mh">0x04</span>          <span class="c1"># Accelerometer and Magnetometer mode</span>
+    <span class="n">MODE_ACCGYRO</span> <span class="o">=</span> <span class="mh">0x05</span>         <span class="c1"># Accelerometer and Gyroscope mode</span>
+    <span class="n">MODE_MAGGYRO</span> <span class="o">=</span> <span class="mh">0x06</span>         <span class="c1"># Magnetometer and Gyroscope mode</span>
+    <span class="n">MODE_AMG</span> <span class="o">=</span> <span class="mh">0x07</span>             <span class="c1"># Accelerometer, Magnetometer, and Gyroscope mode</span>
+    <span class="n">MODE_IMUPLUS</span> <span class="o">=</span> <span class="mh">0x08</span>         <span class="c1"># IMU mode with additional features</span>
+    <span class="n">MODE_COMPASS</span> <span class="o">=</span> <span class="mh">0x09</span>         <span class="c1"># Compass mode</span>
+    <span class="n">MODE_M4G</span> <span class="o">=</span> <span class="mh">0x0A</span>             <span class="c1"># 4th Generation mode</span>
+    <span class="n">MODE_NDOF_FMC_OFF</span> <span class="o">=</span> <span class="mh">0x0B</span>    <span class="c1"># Fusion mode with no sensor fusion</span>
+    <span class="n">MODE_NDOF</span> <span class="o">=</span> <span class="mh">0x0C</span>            <span class="c1"># Full sensor fusion mode</span>
+
+
+    <span class="c1"># Task State Variables</span>
+    <span class="n">S0_CALIBRATION</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">S1_ANGLES</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">S2_VELCOITY</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">S3_HOLDING</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">profiler</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1"># Initialize I2C</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initilizing IMU&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profiler</span> <span class="o">=</span> <span class="n">profiler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span> <span class="o">=</span> <span class="n">HAL</span><span class="o">.</span><span class="n">__IMU__</span><span class="o">.</span><span class="n">I2C</span>  <span class="c1"># Use the pre-configured I2C instance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">S1_ANGLES</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialize_imu</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calibrate_if_needed</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="n">debug</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">Initilizing IMU&quot;</span><span class="p">)</span>
+        <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+
+<div class="viewcode-block" id="BNO055.initialize_imu">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.initialize_imu">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize_imu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Initialize the BNO055 in NDOF mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_mode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MODE_CONFIG</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_mode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MODE_NDOF</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[BNO055] Initialized in NDOF Mode.&quot;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[ERROR] BNO055 not detected. Check wiring!&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BNO055.set_mode">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.set_mode">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Set the operation mode of the BNO055</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">mem_write</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I2C_ADDR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REG_OPR_MODE</span><span class="p">)</span>
+            <span class="n">pyb</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[ERROR] BNO055 cannot set mode&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">e</span></div>
+
+
+<div class="viewcode-block" id="BNO055.get_calibration_status">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.get_calibration_status">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_calibration_status</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+        <span class="c1"># Read the calibration status</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">mem_read</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I2C_ADDR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REG_CALIB_STAT</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">sys</span> <span class="o">=</span> <span class="p">(</span><span class="n">status</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x03</span>  <span class="c1"># System calibration status</span>
+        <span class="n">gyro</span> <span class="o">=</span> <span class="p">(</span><span class="n">status</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x03</span>  <span class="c1"># Gyroscope calibration status</span>
+        <span class="n">accel</span> <span class="o">=</span> <span class="p">(</span><span class="n">status</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x03</span>  <span class="c1"># Accelerometer calibration status</span>
+        <span class="n">mag</span> <span class="o">=</span> <span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x03</span>  <span class="c1"># Magnetometer calibration status</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">gyro</span><span class="p">,</span> <span class="n">accel</span><span class="p">,</span> <span class="n">mag</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BNO055.get_euler_angles">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.get_euler_angles">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_euler_angles</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+        <span class="c1"># Reads Euler angles (heading, pitch, roll) from the IMU</span>
+        <span class="n">raw_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">mem_read</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I2C_ADDR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REG_EULER_ANGLES</span><span class="p">)</span>
+        <span class="n">heading</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">roll</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;&lt;hhh&quot;</span><span class="p">,</span> <span class="n">raw_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">heading</span><span class="p">,</span>
+            <span class="n">pitch</span><span class="p">,</span>
+            <span class="n">roll</span><span class="p">,</span>
+        <span class="p">)</span>  <span class="c1"># Undid conversion in order to possibly improve performance</span></div>
+
+
+<div class="viewcode-block" id="BNO055.get_angular_velocity">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.get_angular_velocity">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_angular_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="c1"># Reads angular velocity (gyroscope data) from the IMU</span>
+        <span class="n">raw_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">mem_read</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I2C_ADDR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REG_GYRO_DATA</span><span class="p">)</span>
+        <span class="n">gyro_x</span><span class="p">,</span> <span class="n">gyro_y</span><span class="p">,</span> <span class="n">gyro_z</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;&lt;hhh&quot;</span><span class="p">,</span> <span class="n">raw_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">gyro_x</span><span class="p">,</span>
+            <span class="n">gyro_y</span><span class="p">,</span>
+            <span class="n">gyro_z</span><span class="p">,</span>
+        <span class="p">)</span>  <span class="c1"># Undid conversion in order to possibly improve performance</span></div>
+
+
+<div class="viewcode-block" id="BNO055.get_calibration_data">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.get_calibration_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_calibration_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Reads calibration coefficients from the IMU</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">mem_read</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I2C_ADDR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REG_CALIBRATION_DATA</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BNO055.write_calibration_data">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.write_calibration_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_calibration_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1"># Writes calibration coefficients to the IMU</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">22</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[ERROR] Invalid calibration data size.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">mem_write</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I2C_ADDR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REG_CALIBRATION_DATA</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BNO055.save_calibration">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.save_calibration">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_calibration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;IMUcalibration.txt&quot;</span><span class="p">):</span>
+        <span class="c1"># Saves calibration data to a file</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_calibration_data</span><span class="p">())</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[BNO055] Calibration saved successfully.&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Failed to save calibration: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BNO055.load_calibration">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.load_calibration">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_calibration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;IMUcalibration.txt&quot;</span><span class="p">):</span>
+        <span class="c1"># Loads calibration data from a file</span>
+
+        <span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">listdir</span>
+
+        <span class="n">file_list</span> <span class="o">=</span> <span class="n">listdir</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">write_calibration_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[BNO055] Calibration loaded from file.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[BNO055] Needs to be done manually:&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="BNO055.calibrate_if_needed">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.calibrate_if_needed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calibrate_if_needed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Check and perform calibration if needed</span>
+        <span class="c1"># if not self.load_calibration():</span>
+        <span class="c1"># self.set_mode(self.MODE_CONFIG)</span>
+        <span class="c1"># print(&quot;[BNO055] Manual calibration required. Move IMU in all directions.&quot;)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_calibration</span><span class="p">():</span>
+            <span class="n">calibration_done</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="n">calibration_done</span><span class="p">:</span>  <span class="c1"># Wait for full system calibration</span>
+                <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_calibration_status</span><span class="p">()</span>
+                <span class="n">calibration_done</span> <span class="o">=</span> <span class="p">(</span><span class="n">status</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">status</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">status</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="mi">9</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calibrating...&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_calibration_status</span><span class="p">())</span>
+                <span class="n">pyb</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_calibration</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[BNO055] Calibration complete and saved.&quot;</span><span class="p">)</span></div>
+
+        <span class="c1"># self.set_mode(self.MODE_NDOF)</span>
+
+<div class="viewcode-block" id="BNO055.task">
+<a class="viewcode-back" href="../api/bno055.html#bno055.BNO055.task">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shares</span><span class="p">):</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>
+
+        <span class="n">heading_share</span><span class="p">:</span> <span class="n">Share</span>
+        <span class="n">target_heading</span><span class="p">:</span> <span class="n">Share</span>
+        <span class="p">(</span><span class="n">heading_share</span><span class="p">,</span> <span class="n">target_heading</span><span class="p">)</span> <span class="o">=</span> <span class="n">shares</span>
+        <span class="n">imu</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+            <span class="n">angles</span> <span class="o">=</span> <span class="n">imu</span><span class="o">.</span><span class="n">get_euler_angles</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Target Heading: </span><span class="si">{</span><span class="n">target_heading</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="si">}</span><span class="s2"> | Measured Heading: </span><span class="si">{</span><span class="n">heading_share</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="n">heading_share</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">angles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="k">yield</span> <span class="n">imu</span><span class="o">.</span><span class="n">state</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

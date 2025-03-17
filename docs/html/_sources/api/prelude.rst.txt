@@ -1,0 +1,7 @@
+prelude module
+==============
+
+.. automodule:: prelude
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,7 @@
+cotask module
+=============
+
+.. automodule:: cotask
+   :members:
+   :show-inheritance:
+   :undoc-members:

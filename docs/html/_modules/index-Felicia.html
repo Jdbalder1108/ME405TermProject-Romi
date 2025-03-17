@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview: module code &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#the-following-sections-will-describe-the-hardware-software-and-testing-results-of-the-project">The following sections will describe the hardware, software, and testing results of the project.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#base-chassis">Base Chassis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#microcontroller">Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#wiring-pinout-design">Wiring/Pinout design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#course-objective">Course/Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#final-configuration">Final Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware.html#the-following-section-will-cover-the-software-used-to-control-the-romi-robot-and-the-algorithms-implemented-for-line-following-and-obstacle-avoidance">The following section will cover the software used to control the Romi robot and the algorithms implemented for line following and obstacle avoidance.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/bno055.html">bno055 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/course.html">course module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/encoder.html">encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/encoder.html#encoder.Encoder"><code class="docutils literal notranslate"><span class="pre">Encoder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/encoder.html#encoder.to_radians"><code class="docutils literal notranslate"><span class="pre">to_radians()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/HAL.html">HAL module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview: module code</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>All modules for which code is available</h1>
+<ul><li><a href="HAL.html">HAL</a></li>
+<li><a href="bno055.html">bno055</a></li>
+<li><a href="bump_sensors.html">bump_sensors</a></li>
+<li><a href="closed_loop.html">closed_loop</a></li>
+<li><a href="collector.html">collector</a></li>
+<li><a href="collector_task.html">collector_task</a></li>
+<li><a href="cotask.html">cotask</a></li>
+<li><a href="course.html">course</a></li>
+<li><a href="encoder.html">encoder</a></li>
+<li><a href="line_sensor.html">line_sensor</a></li>
+<li><a href="main.html">main</a></li>
+<li><a href="micropython.html">micropython</a></li>
+<li><a href="motor.html">motor</a></li>
+<li><a href="motor_control_task.html">motor_control_task</a></li>
+<li><a href="prelude.html">prelude</a></li>
+<li><a href="task_share.html">task_share</a></li>
+<li><a href="tasks.html">tasks</a></li>
+<li><a href="userbutton.html">userbutton</a></li>
+</ul>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

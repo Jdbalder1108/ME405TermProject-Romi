@@ -1,0 +1,19 @@
+===========================
+API Documentation
+===========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API Modules
+
+   bno055
+   bump_sensors
+   closed_loop
+   course
+   encoder
+   HAL
+   line_sensor
+   main
+   motor_control_task
+   Motor
+

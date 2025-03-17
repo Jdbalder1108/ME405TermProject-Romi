@@ -1,0 +1,7 @@
+userbutton module
+=================
+
+.. automodule:: userbutton
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>encoder &mdash; ME405 Romi Robot Term Project 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ME405 Romi Robot Term Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">Hardware Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Project Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/bno055.html">bno055 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bno055.html#bno055.BNO055"><code class="docutils literal notranslate"><span class="pre">BNO055</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/bump_sensors.html">bump_sensors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/bump_sensors.html#bump_sensors.BumpSensor"><code class="docutils literal notranslate"><span class="pre">BumpSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/closed_loop.html">closed_loop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/closed_loop.html#closed_loop.ClosedLoop"><code class="docutils literal notranslate"><span class="pre">ClosedLoop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/course.html">course module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/course.html#course.CourseCompletion"><code class="docutils literal notranslate"><span class="pre">CourseCompletion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/encoder.html">encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/encoder.html#encoder.Encoder"><code class="docutils literal notranslate"><span class="pre">Encoder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/encoder.html#encoder.to_radians"><code class="docutils literal notranslate"><span class="pre">to_radians()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/HAL.html">HAL module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/HAL.html#HAL.HAL"><code class="docutils literal notranslate"><span class="pre">HAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/line_sensor.html">line_sensor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/line_sensor.html#line_sensor.LineSensor"><code class="docutils literal notranslate"><span class="pre">LineSensor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.I2C_test"><code class="docutils literal notranslate"><span class="pre">I2C_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.bump_sensor_test"><code class="docutils literal notranslate"><span class="pre">bump_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.dead_reconing_test"><code class="docutils literal notranslate"><span class="pre">dead_reconing_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.drive_strait"><code class="docutils literal notranslate"><span class="pre">drive_strait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.follow_line_test"><code class="docutils literal notranslate"><span class="pre">follow_line_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.heading_test"><code class="docutils literal notranslate"><span class="pre">heading_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.imu_profiler"><code class="docutils literal notranslate"><span class="pre">imu_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.line_sensor_test"><code class="docutils literal notranslate"><span class="pre">line_sensor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.line_task_profiler"><code class="docutils literal notranslate"><span class="pre">line_task_profiler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.line_task_test"><code class="docutils literal notranslate"><span class="pre">line_task_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.motor_characterization"><code class="docutils literal notranslate"><span class="pre">motor_characterization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.motor_test"><code class="docutils literal notranslate"><span class="pre">motor_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/main.html#main.test_imu"><code class="docutils literal notranslate"><span class="pre">test_imu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/motor_control_task.html">motor_control_task module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/motor_control_task.html#motor_control_task.MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ME405 Romi Robot Term Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">encoder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for encoder</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">prelude</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">HAL</span><span class="w"> </span><span class="kn">import</span> <span class="n">HAL</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">utime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>
+
+<span class="c1"># TODO Update encoder to have a hardware time update callback</span>
+
+
+<div class="viewcode-block" id="to_radians">
+<a class="viewcode-back" href="../api/encoder.html#encoder.to_radians">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">to_radians</span><span class="p">(</span><span class="n">ticks</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">ticks</span> <span class="o">/</span> <span class="mi">120</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span></div>
+
+
+
+<div class="viewcode-block" id="Encoder">
+<a class="viewcode-back" href="../api/encoder.html#encoder.Encoder">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Encoder</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">side</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="n">side_text</span> <span class="o">=</span> <span class="s2">&quot;Left&quot;</span> <span class="k">if</span> <span class="n">side</span> <span class="o">==</span> <span class="n">Vehicle_Side</span><span class="o">.</span><span class="n">LEFT</span> <span class="k">else</span> <span class="s2">&quot;Right&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initializing Encoder </span><span class="si">{</span><span class="n">side_text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_side</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">side</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__hal__</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">HAL</span><span class="o">.</span><span class="n">ENCODER</span><span class="o">.</span><span class="n">LEFT</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_side</span> <span class="o">==</span> <span class="n">Vehicle_Side</span><span class="o">.</span><span class="n">LEFT</span> <span class="k">else</span> <span class="n">HAL</span><span class="o">.</span><span class="n">ENCODER</span><span class="o">.</span><span class="n">RIGHT</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__position__</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_update_time</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__check_value__</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__hal__</span><span class="o">.</span><span class="n">TIM</span><span class="o">.</span><span class="n">period</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__velocity__</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initializing Encoder </span><span class="si">{</span><span class="n">side_text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Encoder.update">
+<a class="viewcode-back" href="../api/encoder.html#encoder.Encoder.update">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_update_time</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">utime</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">now</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_us</span><span class="p">()</span>
+        <span class="n">next_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__hal__</span><span class="o">.</span><span class="n">TIM</span><span class="o">.</span><span class="n">counter</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev_count</span> <span class="o">-</span> <span class="n">next_count</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__check_value__</span><span class="p">:</span>
+            <span class="n">next_count</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__hal__</span><span class="o">.</span><span class="n">TIM</span><span class="o">.</span><span class="n">period</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">next_count</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev_count</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__check_value__</span><span class="p">:</span>
+            <span class="n">next_count</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__hal__</span><span class="o">.</span><span class="n">TIM</span><span class="o">.</span><span class="n">period</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="n">next_count</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev_count</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev_count</span> <span class="o">=</span> <span class="n">next_count</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__position__</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__velocity__</span> <span class="o">=</span> <span class="n">to_radians</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_update_time</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1e-6</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_update_time</span> <span class="o">=</span> <span class="n">now</span></div>
+
+
+<div class="viewcode-block" id="Encoder.position">
+<a class="viewcode-back" href="../api/encoder.html#encoder.Encoder.position">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">to_radians</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__position__</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__position__</span> <span class="o">=</span> <span class="n">pos</span>
+            <span class="k">return</span> <span class="n">pos</span></div>
+
+
+<div class="viewcode-block" id="Encoder.zero">
+<a class="viewcode-back" href="../api/encoder.html#encoder.Encoder.zero">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__position__</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__hal__</span><span class="o">.</span><span class="n">TIM</span><span class="o">.</span><span class="n">counter</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Encoder.velocity">
+<a class="viewcode-back" href="../api/encoder.html#encoder.Encoder.velocity">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="c1"># self.update()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocity__</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Joseph Balderama and Kelly Gruber.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
